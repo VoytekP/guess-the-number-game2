@@ -1,6 +1,6 @@
 package academy.learnprogramming.console;
 
-import academy.learnprogramming.AppConfig;
+import academy.learnprogramming.config.AppConfig;
 import academy.learnprogramming.MessageGenerator;
 import academy.learnprogramming.NumberGenerator;
 import org.slf4j.Logger;
@@ -32,11 +32,12 @@ public class Main {
         // get message generator bean from context (container)
         MessageGenerator messageGenerator =
                 context.getBean(MessageGenerator.class);
-        log.info("getMainMessage= {}", messageGenerator.getMainMassage());
-        log.info("getMainMessage= {}", messageGenerator.getResultMessage());
+        log.info("getMainMessage= {}", messageGenerator.getMainMessage());
+        log.info("getResultMessage= {}", messageGenerator.getResultMessage());
 
         // close context (container)
         context.close();
+
 
     }
 }
